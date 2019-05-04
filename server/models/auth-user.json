@@ -1,0 +1,17 @@
+{
+  "name": "AuthUser",
+  "plural": "Authusers",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mongodb": {
+      "collection": "AuthUser"
+    }
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
