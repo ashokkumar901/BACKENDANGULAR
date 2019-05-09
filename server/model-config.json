@@ -38,5 +38,9 @@
   "AuthUser": {
     "dataSource": "MyLocalMongo",
     "public": true
+  },
+  "hero": {
+    "dataSource": "MyLocalMongo",
+    "public": true
   }
 }
