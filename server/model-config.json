@@ -36,11 +36,11 @@
     "public": false
   },
   "AuthUser": {
-    "dataSource": "MyLocalMongo",
+    "dataSource": "MyLiveMongo",
     "public": true
   },
   "hero": {
-    "dataSource": "MyLocalMongo",
+    "dataSource": "MyLiveMongo",
     "public": true
   }
 }

@@ -12,5 +12,15 @@
     "name": "MyLocalMongo",
     "user": "",
     "connector": "mongodb"
+  },
+  "MyLiveMongo": {
+    "host": "cluster0-0eoqn.mongodb.net",
+    "port": 27017,
+    "url": "mongodb+srv://admin:admin123@cluster0-0eoqn.mongodb.net/MyBackend?retryWrites=true",
+    "database": "MyBackend",
+    "password": "admin123",
+    "name": "MyLiveMongo",
+    "user": "admin",
+    "connector": "mongodb"
   }
 }
