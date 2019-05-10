@@ -3,16 +3,7 @@
     "name": "db",
     "connector": "memory"
   },
-  "MyLocalMongo": {
-    "host": "localhost",
-    "port": 27017,
-    "url": "mongodb://localhost:27017/MyBackend",
-    "database": "MyBackend",
-    "password": "",
-    "name": "MyLocalMongo",
-    "user": "",
-    "connector": "mongodb"
-  },
+ 
   "MyLiveMongo": {
     "host": "ds155086.mlab.com",
     "port": 27017,
