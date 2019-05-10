@@ -217,6 +217,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../environments/environment.prod */ "./src/environments/environment.prod.ts");
+
 
 
 
@@ -226,7 +228,7 @@ var AuthService = /** @class */ (function () {
     function AuthService(http, router) {
         this.http = http;
         this.router = router;
-        this.rootUrl = "https://172.16.21.4:3000/api/Authusers";
+        this.rootUrl = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_5__["environment"].APIEndpoint + "/Authusers";
         this.authTokenSource = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](undefined);
         this.observeAuthToken = this.authTokenSource.asObservable();
         this.userIdSource = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](undefined);
@@ -278,10 +280,8 @@ var AuthService = /** @class */ (function () {
             email: user.email.trim(),
             password: user.password.trim()
         };
-        console.log("authUser", authUser);
         this.http.post(url, authUser).subscribe(function (res) {
             var response = res;
-            console.log('Please respond', response);
             if (cb) {
                 cb(null, res);
                 alert('signup succeeded');
@@ -638,6 +638,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _message_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./message.service */ "./src/app/message.service.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _environments_environment_prod__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../environments/environment.prod */ "./src/environments/environment.prod.ts");
+
 
 
 
@@ -648,7 +650,7 @@ var HeroService = /** @class */ (function () {
     function HeroService(messageService, http) {
         this.messageService = messageService;
         this.http = http;
-        this.heroesUrl = 'http://localhost:3000/api/heroes';
+        this.heroesUrl = _environments_environment_prod__WEBPACK_IMPORTED_MODULE_6__["environment"].APIEndpoint + "/heroes";
     }
     HeroService.prototype.log = function (message) {
         this.messageService.add("HeroService:" + message);
@@ -1103,6 +1105,24 @@ var SignupComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/environments/environment.prod.ts":
+/*!**********************************************!*\
+  !*** ./src/environments/environment.prod.ts ***!
+  \**********************************************/
+/*! exports provided: environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+var environment = {
+    production: true,
+    APIEndpoint: 'https://testapp9676.herokuapp.com/api'
+};
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -1117,7 +1137,8 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    APIEndpoint: 'https://localhost:3000/api/Authusers'
 };
 /*
  * For easier debugging in development mode, you can import the following file
