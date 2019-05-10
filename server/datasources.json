@@ -21,6 +21,6 @@
     "password": "admin123",
     "name": "MyLiveMongo",
     "user": "admin",
-    "connector": "mongodb"
+    "connector": "loopback-connector-mongodb"
   }
 }
