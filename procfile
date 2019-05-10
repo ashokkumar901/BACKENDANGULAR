@@ -1,0 +1,1 @@
+web: MYCUSTOMVAR ="prod" node .
