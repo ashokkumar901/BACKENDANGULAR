@@ -14,10 +14,10 @@
     "connector": "mongodb"
   },
   "MyLiveMongo": {
-    "host": "cluster0-0eoqn.mongodb.net",
+    "host": "ds155086.mlab.com",
     "port": 27017,
-    "url": "mongodb+srv://admin:admin123@cluster0-0eoqn.mongodb.net/MyBackend?retryWrites=true",
-    "database": "MyBackend",
+    "url": "mongodb://admin:admin123@ds155086.mlab.com:55086/heroku_jr3cfvb3",
+    "database": "heroku_jr3cfvb3",
     "password": "admin123",
     "name": "MyLiveMongo",
     "user": "admin",
