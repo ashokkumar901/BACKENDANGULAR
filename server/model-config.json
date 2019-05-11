@@ -41,6 +41,6 @@
   },
   "hero": {
     "dataSource": "MyLiveMongo",
-    "public": false
+    "public": true
   }
 }
