@@ -40,7 +40,6 @@
     "public": false
   },
   "hero": {
-    "dataSource": "MyLiveMongo",
-    "public": true
+    "dataSource": "MyLiveMongo","public": true
   }
 }
