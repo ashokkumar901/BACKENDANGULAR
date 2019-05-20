@@ -14,7 +14,7 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "MyLiveMongo"
   },
   "AccessToken": {
     "dataSource": "db",
